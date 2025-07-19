@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quote Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+<audio id="quote-sound" src="sound.mp3" preload="auto"></audio>
+
+  <!-- Theme toggle -->
+<div class="theme-switch">
+    <label>
+      <input type="checkbox" id="theme-toggle" hidden />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- Main content -->
+  <div class="container">
+    <h1>Random Quote Generator</h1>
+      <button id="generate-quote">Generate Quote</button>
+    <p id="quote" class="show">Click the button to get a quote</p>
+    
+  </div>
+<button id="copy-quote">📋 Copy Quote</button>
+  <script src="script.js"></script>
+</body>
+</html>

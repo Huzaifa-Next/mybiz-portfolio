@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dark-mode-toggle input[type="checkbox"] {
+    display: none;
+}
+.dark-mode-toggle {
+    cursor: pointer;
+    font-size: 1.4em;
+    user-select: none;
+    margin-right: 1rem;
+}
+[data-theme="dark"] {
+    background-color: #111;
+    color: #eee;
+}
+[data-theme="dark"] header, [data-theme="dark"] footer {
+    background-color: #222;
+}
+[data-theme="dark"] .project-card, [data-theme="dark"] .features li {
+    background-color: #1a1a1a;
+    border-color: #444;
+}
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+ header {
+    color: #fff;
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+ }
+
+ .logo{
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+ }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #0fbcf9;
+}
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #0fbcf9, #00c7b7);
+    color: white;
+}
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.hero p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.hero button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background: white;
+    color: #0fbcf9;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hero button:hover {
+    background-color: #f0f0f0;
+}
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+.features li {
+    background: #f1f1f1;
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+    min-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.features li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+}
+#projects {
+    padding: 40px 20px;
+}
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.project-card {
+    box-sizing: content-box;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0fbcf9;
+    text-decoration: none;
+}
+.project-card a:hover {
+    text-decoration: underline;
+    color: white;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    width: 100%;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
+}
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    resize: vertical;
+}
+button[type="submit"] {
+    background-color: #0fbcf9;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    align-self: start;
+}
+button[type="submit"]:hover {
+    background-color: #00a6d6;
+    transform: translateY(-2px);
+}
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 15px;
+    margin-top: 40px;
+    border-top: 2px solid #0fbcf9;
+}
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #111;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+    }
+    nav ul.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero {
+        padding: 60px 20px;
+    }
+    .hero h1 {
+        font-size: 28px;
+}
+    .hero p {
+        font-size: 16px;
+}
+    section {
+        padding: 40px 20px;
+}
+.features {
+    flex-direction: column;
+    align-items: center;
+}
+.project-list {
+    flex-direction: column;
+    align-items: center;
+}
+.project-card {
+    width: 90%;
+}
+    form {
+        width: 100%;
+        padding: 0 10px;
+}
+input,textarea {
+    font-size: 14px;
+}
+.btn {
+    width: 100%;
+    text-align: center;
+}
+footer {
+    font-size: 14px;
+    padding: 30px 20px;
+}
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+    .hero p {
+        font-size: 16;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+.btn:hover {
+    background-color: #00c7b7;
+}
+@media (max-width: 768px) {
+    .project-list {flex-direction: column; align-items: center;}
+    .project-card {
+        width: 90%;
+        max-width: 320px;
+    }
+}
+section:not(:first-of-type) {
+    margin-top: 40px;
+}
+[data-theme="dark"] body,
+[data-theme="dark"] section,
+[data-theme="dark"] footer {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+[data-theme="dark"] .project-card
+[data-theme="dark"] input,
+[data-theme="dark"] button {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #444;
+}
+[data-theme="dark"] nav ul li a:hover {
+    color: #00c7b7;
+}
+[data-theme="dark"] .hero button:hover{
+    color: #000;
+}
+[data-theme="dark"] .project-card a:hover {
+    color: #0fbcf9;
+    background-color: white;
+}
+[data-theme="dark"] .hero {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+}
+html {
+    scroll-behavior: smooth;
+}
